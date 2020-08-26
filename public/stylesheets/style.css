@@ -1,0 +1,46 @@
+.container{
+  display: flex;
+  flex-direction: column;
+}
+.upper{
+  margin: 0 auto;
+  color: #999999;
+}
+
+.cards{
+  display: flex;
+  margin: 20px 0 0 0;
+}
+
+.card {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+.card-img-top {
+  height: 200px;
+  width: auto;
+}
+
+.card-body{
+ margin: 0 auto;
+}
+
+.results{
+  display: flex;
+  margin: 20px 30px;
+}
+.btn{
+  width: 15%;
+  height: 50px;
+  margin-right: 20px;
+  font-size: 20px;
+  text-aling: center;
+}
+.alert-warning{
+  width: 85%;
+  height: 150px;
+}
+
+.h5{
+  text-aling: center
+}
