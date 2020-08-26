@@ -34,7 +34,7 @@
   height: 50px;
   margin-right: 20px;
   font-size: 20px;
-  text-aling: center;
+  text-align: center;
 }
 .alert-warning{
   width: 85%;
@@ -42,5 +42,5 @@
 }
 
 .h5{
-  text-aling: center
+  text-align: center;
 }
