@@ -3,11 +3,6 @@ function collection_Trash(array) {
   return array[index]
 }
 
-// function collectionPhrase(array) {
-//   const index = Math.floor(Math.random() * array.length)
-//   return array[index]
-// }
-
 function generateTrash(options) {
   //define things user might want
   const task = {
