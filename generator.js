@@ -1,12 +1,12 @@
-function collectionTask(array) {
+function collection_Trash(array) {
   const index = Math.floor(Math.random() * array.length)
   return array[index]
 }
 
-function collectionPhrase(array) {
-  const index = Math.floor(Math.random() * array.length)
-  return array[index]
-}
+// function collectionPhrase(array) {
+//   const index = Math.floor(Math.random() * array.length)
+//   return array[index]
+// }
 
 function generateTrash(options) {
   //define things user might want
@@ -18,37 +18,53 @@ function generateTrash(options) {
   }
   const phrase = ['很簡單', '很容易', '很快', '很正常']
 
+
+
+
   // create a collection to store things user picked up
+  const job = options.jobs
   let collection_task = []
-  if (options.engineer === 'on') {
-    collection_task = task.engineer
-  }
-  if (options.designer === 'on') {
-    collection_task = task.designer
-  }
-  if (options.entrepreneur === 'on') {
-    collection_task = task.entrepreneur
+  switch (job) {
+    case 'engineer':
+      collection_task = task.engineer
+      break
+    case 'designer':
+      collection_task = task.designer
+      break
+    case 'entrepreneur':
+      collection_task = task.entrepreneur
+      break
   }
 
   // start generating
   let collection = []
-  collection = collectionTask(collection_task) + collectionPhrase(phrase)
+  collection = collection_Trash(collection_task) + collection_Trash(phrase)
 
-  //error message
   // return the generated 
-  if (options.engineer === 'on' || options.designer === 'on' || options.entrepreneur === 'on') {
-    if (options.engineer === 'on') {
+  switch (job) {
+    case 'engineer':
       return `身為一個工程師${collection}`
-    }
-    if (options.designer === 'on') {
+    case 'designer':
       return `身為一個設計師${collection}`
-    }
-    if (options.entrepreneur === 'on') {
+    case 'entrepreneur':
       return `身為一個創業家${collection}`
-    }
-  } else {
-    return '身為一個使用者點個職業很簡單吧'
+    default:
+      return '身為一個使用者點個職業很簡單吧'
   }
+
+  // if (jobs.engineer === 'on' || jobs.designer === 'on' || jobs.entrepreneur === 'on') {
+  //   if (jobs.engineer === 'on') {
+  //     return `身為一個工程師${collection}`
+  //   }
+  //   if (jobs.designer === 'on') {
+  //     return `身為一個設計師${collection}`
+  //   }
+  //   if (jobs.entrepreneur === 'on') {
+  //     return `身為一個創業家${collection}`
+  //   }
+  // } else {
+  //   return '身為一個使用者點個職業很簡單吧'
+  // }
 
 }
 module.exports = generateTrash
