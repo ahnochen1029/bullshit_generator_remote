@@ -32,24 +32,24 @@ function generateTrash(options) {
 
   // start generating
   let collection = []
-
   collection = collectionTask(collection_task) + collectionPhrase(phrase)
 
   //error message
-  // if(options.length != 1){
-
-  // }
-  console.log('options.length', options.length)
   // return the generated 
-  if (options.engineer === 'on') {
-    return `身為一個工程師${collection}`
+  if (options.engineer === 'on' || options.designer === 'on' || options.entrepreneur === 'on') {
+    if (options.engineer === 'on') {
+      return `身為一個工程師${collection}`
+    }
+    if (options.designer === 'on') {
+      return `身為一個設計師${collection}`
+    }
+    if (options.entrepreneur === 'on') {
+      return `身為一個創業家${collection}`
+    }
+  } else {
+    return '身為一個使用者點個職業很簡單吧'
   }
-  if (options.designer === 'on') {
-    return `身為一個設計師${collection}`
-  }
-  if (options.entrepreneur === 'on') {
-    return `身為一個創業家${collection}`
-  }
+
 }
 module.exports = generateTrash
 
