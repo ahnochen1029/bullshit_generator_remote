@@ -52,20 +52,6 @@ function generateTrash(options) {
       return '身為一個使用者點個職業很簡單吧'
   }
 
-  // if (jobs.engineer === 'on' || jobs.designer === 'on' || jobs.entrepreneur === 'on') {
-  //   if (jobs.engineer === 'on') {
-  //     return `身為一個工程師${collection}`
-  //   }
-  //   if (jobs.designer === 'on') {
-  //     return `身為一個設計師${collection}`
-  //   }
-  //   if (jobs.entrepreneur === 'on') {
-  //     return `身為一個創業家${collection}`
-  //   }
-  // } else {
-  //   return '身為一個使用者點個職業很簡單吧'
-  // }
-
 }
 module.exports = generateTrash
 
