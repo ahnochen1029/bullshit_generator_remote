@@ -11,7 +11,8 @@
               class="card-img-top" alt="...">
             <div class="card-body">
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="jobs" id="engineer" value="engineer">
+                <input class="form-check-input" type="radio" name="jobs" id="engineer" value="engineer"
+                  {{#is job "engineer"}}checked{{/is}}>
                 <label class="form-check-label" for="engineer">工程師</label>
               </div>
             </div>
@@ -23,7 +24,8 @@
               class="card-img-top" alt="...">
             <div class="card-body">
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="jobs" id="designer" value="designer">
+                <input class="form-check-input" type="radio" name="jobs" id="designer" value="designer"
+                  {{#is job "designer"}}checked{{/is}}>
                 <label class="form-check-label" for="designer">設計師</label>
               </div>
             </div>
@@ -35,7 +37,8 @@
               class="card-img-top" alt="...">
             <div class="card-body">
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="jobs" id="entrepreneur" value="entrepreneur">
+                <input class="form-check-input" type="radio" name="jobs" id="entrepreneur" value="entrepreneur"
+                  {{#is job "entrepreneur"}}checked{{/is}}>
                 <label class="form-check-label" for="entrepreneur">創業家</label>
               </div>
             </div>
